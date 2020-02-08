@@ -3,6 +3,18 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="html"/>
 
+    <xsl:template match="review">
+        <div class="col-md-4">
+            <img class="img-circle" height="140" width="140" >
+                <xsl:attribute name="src">
+                    <xsl:value-of select="./image"/>
+                </xsl:attribute>
+            </img>
+            <h2><xsl:value-of select="./name"/></h2>
+            <p><xsl:value-of select="./comment"/></p>
+        </div>
+    </xsl:template>
+
     <xsl:template name="about">
         <h2>מי אני?</h2>
         <div>
@@ -68,8 +80,8 @@
             <head>
                 <meta charset="utf-8" />
                 <meta content="width=device-width, initial-scale=1" name="viewport" />
-                <title>Bootstrap template title</title>
-                <link href="style.css" rel="stylesheet" type="text/css" />
+                <title>הילה בורשטיין</title>
+                <link href="dist/site.css" rel="stylesheet" type="text/css" />
             </head>
             <body>
                 <div class="container">
@@ -97,21 +109,7 @@
                     <hr class="featurette-divider" />
                     <div class="text-center">
                         <div class="row">
-                            <div class="col-md-4">
-                                <img class="img-circle" height="140" src="?" width="140" />
-                                <h2>title</h2>
-                                <p>Testttttt</p>
-                            </div>
-                            <div class="col-md-4">
-                                <img class="img-circle" height="140" src="?" width="140" />
-                                <h2>title</h2>
-                                <p>Testttttt</p>
-                            </div>
-                            <div class="col-md-4">
-                                <img class="img-circle" height="140" src="?" width="140" />
-                                <h2>title</h2>
-                                <p>Testttttt</p>
-                            </div>
+                            <xsl:apply-templates select="document('dist/reviews.xml')/reviews/review"/>
                         </div>
                     </div>
                 </div>
