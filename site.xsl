@@ -73,6 +73,7 @@
                     rel="stylesheet" type="text/css" />
                 <link href="dist/bootstrap.css" rel="stylesheet" type="text/css" />
                 <link href="https://getbootstrap.com/docs/3.4/examples/carousel/carousel.css" rel="stylesheet" type="text/css" />
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
                 <link href="site.css" rel="stylesheet" type="text/css" />
             </head>
             <body>
@@ -95,6 +96,24 @@
                                     <xsl:call-template name="contact-form"/>
                                 </div>
                             </div>
+                            <a class="btn btn-block btn-social btn-facebook"
+                                target="_blank"
+                                href="https://www.facebook.com/Hila-Burshtein-162731901343398/">
+                                <span class="fab fa-facebook"></span>
+                                Hila Burshtein
+                            </a>
+                            <a class="btn btn-block btn-social btn-instagram"
+                                target="_blank"
+                                href="https://www.instagram.com/hila.burshtein/">
+                                <span class="fab fa-instagram"></span>
+                                hila.burshtein
+                            </a>
+                            <a class="btn btn-block btn-social btn-whatsapp"
+                                target="_blank"
+                                href="היי, מעוניינת בפרטים נוספים, נא לחזור אלי">
+                                <span class="fab fa-whatsapp"></span>
+                                054-580-0722
+                            </a>
                         </div>
                     </div>
                     <xsl:apply-templates select="featurette"/>
