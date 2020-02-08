@@ -1,0 +1,15 @@
+body {
+    font-family: "Alef Hebrew", Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin-top: 50px;
+}
+
+.jumbotron {
+    background-image: url(https://instagram.fsdv3-1.fna.fbcdn.net/v/t51.2885-15/e35/60638942_346556886051831_361278660949274717_n.jpg?_nc_ht=instagram.fsdv3-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=Xu4e6EOUrMoAX_W0F3v&oh=2eaab8bd7bb321ea2be7aefc89cfca67&oe=5EA4B13C);
+    background-position: 0 23%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about {
+    white-space: pre-line;
+}
