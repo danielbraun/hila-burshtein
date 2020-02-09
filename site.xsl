@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="html"/>
-
     <xsl:template match="review">
         <div class="col-md-4">
             <img class="img-circle" height="140" width="140" >
@@ -15,7 +14,6 @@
     </xsl:template>
 
     <xsl:template match="featurette">
-        <hr class="featurette-divider" />
         <div class="row featurette">
             <div class="col-md-7">
                 <h2 class="featurette-heading">
@@ -79,20 +77,31 @@
             <body>
                 <div class="container">
                     <div class="jumbotron">
-                        <h1>הילה בורשטיין</h1>
-                        <p>נטורופתיה ודיקור קוסמטי</p>
-                        <p>
-                            <button class="btn btn-primary btn-lg">לטיפול נסיון</button>
-                        </p>
+                        <div class="invisible">
+                            <h1>הילה בורשטיין</h1>
+                            <p>נטורופתיה ודיקור קוסמטי</p>
+                            <p>
+                                <button class="btn btn-primary btn-lg">לטיפול נסיון</button>
+                            </p>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-8 about">
-                            <xsl:value-of select="./about"/>
+                        <div class="col-md-8 ">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <h3> מי אני? </h3>
+                                    <div class="pre-line">
+                                        <xsl:value-of select="./about"/>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-4">
                             <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="panel-title">יצירת קשר</div>
+                                </div>
                                 <div class="panel-body">
-
                                     <xsl:call-template name="contact-form"/>
                                 </div>
                             </div>
@@ -115,8 +124,34 @@
                                 054-580-0722
                             </a>
                         </div>
+
                     </div>
-                    <xsl:apply-templates select="featurette"/>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-xs-6 col-md-3">
+                            <a href="#" class="thumbnail">
+                                <img src="https://www.instagram.com/p/B1ZFqgyHmiR/media?size=l" />
+                            </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                            <a href="#" class="thumbnail">
+                                <img src="https://www.instagram.com/p/Bx9sGG0ApZi/media?size=l" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <xsl:for-each select="//treatment">
+                            <div class="col-md-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <xsl:value-of select="@name"/>
+                                    </div>
+                                    <div class="panel-body pre-line">
+                                        <xsl:value-of select="."/>
+                                    </div>
+                                </div>
+                            </div>
+                    </xsl:for-each></div>
                     <hr class="featurette-divider" />
                     <div class="text-center">
                         <div class="row">
