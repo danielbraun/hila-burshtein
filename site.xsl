@@ -13,11 +13,27 @@
         </div>
     </xsl:template>
 
+    <xsl:template match="photo">
+        <div class="col-xs-6 col-md-3">
+            <a target="_blank" class="thumbnail">
+                <xsl:attribute name="href">
+                    <xsl:value-of select="@url"/>
+                </xsl:attribute>
+                <img>
+                    <xsl:attribute name="src">
+                        <xsl:value-of select="@url"/>
+                    </xsl:attribute>
+                </img>
+            </a>
+        </div>
+    </xsl:template>
+
     <xsl:template match="featurette">
         <div class="row featurette">
             <div class="col-md-7">
                 <h2 class="featurette-heading">
                     <xsl:value-of select="@heading"/>
+                    <br/>
                     <span class="text-muted">
                         <xsl:value-of select="@secondary"/>
                     </span>
@@ -48,10 +64,6 @@
                     <label class="control-label" for="field-tel">טלפון</label>
                     <input class="form-control" id="field-tel" name="tel" type="tel" value="" />
                 </div>
-                <div class="form-group" id="row-field-message">
-                    <label class="control-label" for="field-message">הודעה</label>
-                    <textarea class="form-control" id="field-message" name="message"></textarea>
-                </div>
             </fieldset>
             <fieldset class="fieldset-submit">
                 <div class="form-group" id="row-field-submit">
@@ -76,14 +88,10 @@
             </head>
             <body>
                 <div class="container">
-                    <div class="jumbotron">
-                        <div class="invisible">
-                            <h1>הילה בורשטיין</h1>
-                            <p>נטורופתיה ודיקור קוסמטי</p>
-                            <p>
-                                <button class="btn btn-primary btn-lg">לטיפול נסיון</button>
-                            </p>
-                        </div>
+
+                    <div class="panel panel-default">
+
+                        <img src="images/hila_logo.png" class="logo"/>
                     </div>
                     <div class="row">
                         <div class="col-md-8 ">
@@ -119,26 +127,22 @@
                             </a>
                             <a class="btn btn-block btn-social btn-whatsapp"
                                 target="_blank"
-                                href="היי, מעוניינת בפרטים נוספים, נא לחזור אלי">
+                                href="https://wa.me/15551234567?text=היי, מעוניינת בפרטים נוספים, נא לחזור אלי">
                                 <span class="fab fa-whatsapp"></span>
                                 054-580-0722
                             </a>
                         </div>
+                    </div>
 
-                    </div>
-                    <hr/>
                     <div class="row">
-                        <div class="col-xs-6 col-md-3">
-                            <a href="#" class="thumbnail">
-                                <img src="https://www.instagram.com/p/B1ZFqgyHmiR/media?size=l" />
-                            </a>
-                            </div>
-                            <div class="col-xs-6 col-md-3">
-                            <a href="#" class="thumbnail">
-                                <img src="https://www.instagram.com/p/Bx9sGG0ApZi/media?size=l" />
-                            </a>
-                        </div>
                     </div>
+
+                    <hr class="featurette-divider"/>
+                    <xsl:apply-templates select="//featurette"/>
+                    <hr class="featurette-divider"/>
+
+
+                    <h2>ממליצים עלי</h2>
                     <div class="row">
                         <xsl:for-each select="//treatment">
                             <div class="col-md-6">
@@ -152,7 +156,7 @@
                                 </div>
                             </div>
                     </xsl:for-each></div>
-                    <hr class="featurette-divider" />
+                    <hr/>
                     <div class="text-center">
                         <div class="row">
                             <xsl:apply-templates select="document('dist/reviews.xml')/reviews/review"/>
