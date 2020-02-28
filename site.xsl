@@ -79,7 +79,7 @@
                 <meta charset="utf-8" />
                 <meta content="width=device-width, initial-scale=1" name="viewport" />
                 <title>הילה בורשטיין</title>
-                <link href="http://fonts.googleapis.com/earlyaccess/alefhebrew.css"
+                <link href="https://fonts.googleapis.com/earlyaccess/alefhebrew.css"
                     rel="stylesheet" type="text/css" />
                 <link href="dist/bootstrap.css" rel="stylesheet" type="text/css" />
                 <link href="https://getbootstrap.com/docs/3.4/examples/carousel/carousel.css" rel="stylesheet" type="text/css" />
