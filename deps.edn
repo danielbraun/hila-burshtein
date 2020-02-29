@@ -1,0 +1,2 @@
+{:deps {com.googlecode.ez-vcard/ez-vcard {:mvn/version "0.10.5"}}
+ :paths ["src/"]}
