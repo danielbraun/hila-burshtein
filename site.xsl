@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:vcards="urn:ietf:params:xml:ns:vcard-4.0">
     <xsl:output method="html"/>
     <xsl:template match="review">
         <div class="col-md-4">
@@ -73,7 +75,7 @@
         </form>
     </xsl:template>
 
-    <xsl:template match="site">
+    <xsl:template match="//vcards:vcard">
         <html>
             <head>
                 <meta charset="utf-8" />
@@ -85,21 +87,57 @@
                 <link href="https://getbootstrap.com/docs/3.4/examples/carousel/carousel.css" rel="stylesheet" type="text/css" />
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
                 <link href="site.css" rel="stylesheet" type="text/css" />
+                <link rel="shortcut icon">
+                    <xsl:attribute name="href">
+                        <xsl:value-of select="./vcards:photo/vcards:uri"/>
+                    </xsl:attribute>
+                </link>
             </head>
             <body>
                 <div class="container">
+                    <h1 class="text-center">
+                        <img class="img-circle" style="height: 3em;">
+                            <xsl:attribute name="src">
+                                <xsl:value-of select="./vcards:photo/vcards:uri"/>
+                            </xsl:attribute>
+                        </img>
+                        <br/>
+                        <xsl:value-of select="./vcards:fn" />
+                        <br/>
+                        <small>
+                            <xsl:value-of select="./vcards:org" />
+                        </small>
+                    </h1>
 
-                    <div class="panel panel-default">
+                    <a href="./hila_burshtein.vcf"
+                        class="btn btn-default">
+                        הוספה לאנשי קשר
+                        <span class="glyphicon glyphicon-user"/>
+                    </a>
 
-                        <img src="images/hila_logo.png" class="logo"/>
-                    </div>
+                    <xsl:text> </xsl:text>
+
+                    <xsl:for-each select="./vcards:tel">
+                        <xsl:variable name="number"
+                            select="./vcards:text/text()"/>
+                        <a class="btn btn-primary">
+                            <xsl:attribute name="href">
+                                tel:<xsl:value-of select="$number"/>
+                            </xsl:attribute>
+                            <xsl:value-of select="$number" />
+                            <xsl:text> </xsl:text>
+                            <span class="glyphicon glyphicon-earphone"/>
+                        </a>
+                    </xsl:for-each>
+
+
+
                     <div class="row">
                         <div class="col-md-8 ">
                             <div class="panel panel-default">
                                 <div class="panel-body">
-                                    <h3> מי אני? </h3>
                                     <div class="pre-line">
-                                        <xsl:value-of select="./about"/>
+                                        <xsl:value-of select="./vcards:note/vcards:text/text()"/>
                                     </div>
                                 </div>
                             </div>
@@ -131,35 +169,6 @@
                                 <span class="fab fa-whatsapp"></span>
                                 054-580-0722
                             </a>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                    </div>
-
-                    <hr class="featurette-divider"/>
-                    <xsl:apply-templates select="//featurette"/>
-                    <hr class="featurette-divider"/>
-
-
-                    <h2>ממליצים עלי</h2>
-                    <div class="row">
-                        <xsl:for-each select="//treatment">
-                            <div class="col-md-6">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <xsl:value-of select="@name"/>
-                                    </div>
-                                    <div class="panel-body pre-line">
-                                        <xsl:value-of select="."/>
-                                    </div>
-                                </div>
-                            </div>
-                    </xsl:for-each></div>
-                    <hr/>
-                    <div class="text-center">
-                        <div class="row">
-                            <xsl:apply-templates select="document('dist/reviews.xml')/reviews/review"/>
                         </div>
                     </div>
                 </div>

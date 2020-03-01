@@ -1,19 +1,5 @@
 body {
     font-family: "Alef Hebrew", Helvetica Neue, Helvetica, Arial, sans-serif;
-    margin-top: 50px;
-}
-
-.logo {
-    width: 100%;
-}
-
-.jumbotron {
-    background: url(images/hila_logo.png);
-    background-color: white;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 20%;
 }
 
 .pre-line {
