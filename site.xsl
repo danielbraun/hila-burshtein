@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:bs3="https://getbootstrap.com/docs/3.4/"
     xmlns:vcards="urn:ietf:params:xml:ns:vcard-4.0">
     <xsl:output method="html"/>
     <xsl:template match="review">
@@ -12,6 +13,19 @@
             </img>
             <h2><xsl:value-of select="./name"/></h2>
             <p><xsl:value-of select="./comment"/></p>
+        </div>
+    </xsl:template>
+
+    <xsl:template match="bs3:panel">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <xsl:value-of select="./title"/>
+                </div>
+            </div>
+            <div class="panel-body">
+                <xsl:value-of select="./body"/>
+            </div>
         </div>
     </xsl:template>
 
@@ -109,31 +123,34 @@
                         </small>
                     </h1>
 
-                    <a href="./hila_burshtein.vcf"
-                        class="btn btn-default">
-                        הוספה לאנשי קשר
-                        <span class="glyphicon glyphicon-user"/>
-                    </a>
+                    <p class="text-center">
 
-                    <xsl:text> </xsl:text>
-
-                    <xsl:for-each select="./vcards:tel">
-                        <xsl:variable name="number"
-                            select="./vcards:text/text()"/>
-                        <a class="btn btn-primary">
-                            <xsl:attribute name="href">
-                                tel:<xsl:value-of select="$number"/>
-                            </xsl:attribute>
-                            <xsl:value-of select="$number" />
-                            <xsl:text> </xsl:text>
-                            <span class="glyphicon glyphicon-earphone"/>
+                        <a href="./hila_burshtein.vcf"
+                            class="btn btn-default">
+                            הוספה לאנשי קשר
+                            <span class="glyphicon glyphicon-user"/>
                         </a>
-                    </xsl:for-each>
 
+
+                        <xsl:text> </xsl:text>
+
+                        <xsl:for-each select="./vcards:tel">
+                            <xsl:variable name="number"
+                                select="./vcards:text/text()"/>
+                            <a class="btn btn-primary">
+                                <xsl:attribute name="href">
+                                    tel:<xsl:value-of select="$number"/>
+                                </xsl:attribute>
+                                <xsl:value-of select="$number" />
+                                <xsl:text> </xsl:text>
+                                <span class="glyphicon glyphicon-earphone"/>
+                            </a>
+                        </xsl:for-each>
+                    </p>
 
 
                     <div class="row">
-                        <div class="col-md-8 ">
+                        <div class="col-md-8 col-md-offset-2">
                             <div class="panel panel-default">
                                 <div class="panel-body">
                                     <div class="pre-line">
@@ -141,34 +158,29 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <div class="panel-title">יצירת קשר</div>
-                                </div>
-                                <div class="panel-body">
-                                    <xsl:call-template name="contact-form"/>
-                                </div>
+
+                            <div class="text-center">
+                                <a class="btn btn-facebook"
+                                    target="_blank"
+                                    href="https://www.facebook.com/Hila-Burshtein-162731901343398/">
+                                    <span class="fab fa-facebook"></span>
+                                    Hila Burshtein
+                                </a>
+                                <xsl:text> </xsl:text>
+                                <a class="btn btn-social btn-instagram"
+                                    target="_blank"
+                                    href="https://www.instagram.com/hila.burshtein/">
+                                    <span class="fab fa-instagram"></span>
+                                    hila.burshtein
+                                </a>
+                                <xsl:text> </xsl:text>
+                                <a class="btn btn-social btn-whatsapp"
+                                    target="_blank"
+                                    href="https://wa.me/15551234567?text=היי, מעוניינת בפרטים נוספים, נא לחזור אלי">
+                                    <span class="fab fa-whatsapp"></span>
+                                    054-580-0722
+                                </a>
                             </div>
-                            <a class="btn btn-block btn-social btn-facebook"
-                                target="_blank"
-                                href="https://www.facebook.com/Hila-Burshtein-162731901343398/">
-                                <span class="fab fa-facebook"></span>
-                                Hila Burshtein
-                            </a>
-                            <a class="btn btn-block btn-social btn-instagram"
-                                target="_blank"
-                                href="https://www.instagram.com/hila.burshtein/">
-                                <span class="fab fa-instagram"></span>
-                                hila.burshtein
-                            </a>
-                            <a class="btn btn-block btn-social btn-whatsapp"
-                                target="_blank"
-                                href="https://wa.me/15551234567?text=היי, מעוניינת בפרטים נוספים, נא לחזור אלי">
-                                <span class="fab fa-whatsapp"></span>
-                                054-580-0722
-                            </a>
                         </div>
                     </div>
                 </div>
