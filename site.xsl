@@ -181,6 +181,7 @@
                                     054-580-0722
                                 </a>
                             </div>
+                            <hr/>
                              <xsl:apply-templates select="document('dist/reviews.xml')/reviews/review"/>
                         </div>
                     </div>
