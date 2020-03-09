@@ -5,7 +5,7 @@
     xmlns:vcards="urn:ietf:params:xml:ns:vcard-4.0">
     <xsl:output method="html"/>
     <xsl:template match="review">
-        <div class="col-md-4">
+        <div class="col-md-4 text-center">
             <img class="img-circle" height="140" width="140" >
                 <xsl:attribute name="src">
                     <xsl:value-of select="./image"/>
@@ -181,6 +181,7 @@
                                     054-580-0722
                                 </a>
                             </div>
+                             <xsl:apply-templates select="document('dist/reviews.xml')/reviews/review"/>
                         </div>
                     </div>
                 </div>
