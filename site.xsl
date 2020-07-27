@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:bs3="http://www.getbootstrap.com/3.3">
     <xsl:output method="html"/>
+
+    <xsl:template match="bs3:navbar" mode="">
+        <h1>HELLO THERE</h1>
+    </xsl:template>
     <xsl:template match="review">
         <div class="col-md-4">
             <img class="img-circle" height="140" width="140" >
@@ -87,6 +94,7 @@
                 <link href="site.css" rel="stylesheet" type="text/css" />
             </head>
             <body>
+                <bs3:navbar/>
                 <div class="container">
 
                     <div class="panel panel-default">
