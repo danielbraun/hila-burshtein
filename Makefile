@@ -1,10 +1,10 @@
-all: dist/bootstrap.css dist/reviews.xml site.html
+all: www/css/bootstrap.css dist/reviews.xml site.html
 
-dist/bootstrap.css: bootstrap.less
+%.css: %.less
 	./node_modules/.bin/lessc $< $@
 
 dist/reviews.xml:  reviews/parser.xsl reviews/facebook_reviews.html
-	xsltproc --html $^ > $@
+	xsltproc -o $@--html $^
 
 site.html: site.xsl index.xml
-	xsltproc $^ > $@
+	xsltproc -o $@ $^

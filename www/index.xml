@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="xslt/index.xsl" type="text/xsl" ?>
+<site>
+    <page href="/" title="בית">
+        <about>שמי הילה בורשטיין, נטורופתית וקוסמטיקאית הוליסטית. הקסם התחיל עוד בהיותי ילדה, נהנתי להתבונן בנשים במשפחתי המטפלות בקפידה בעורן. הסקרנות שלי הלכה וגברה והובילה אותי להמשיך בקריירה כאסתטיקאית לטיפוח העור. מתוך אמונה שיש להתייחס לגופנו בכבוד, להזין אותו ולהבין שכל איבר קטן תורם למערכת הגדולה והמורכבת אשר מתפקדת כיחידה אחת ומושלמת. במידה והמערכת נחלשה ולא עובדת בשלמות צריך לרדת לשורש הבעיה, הדבר נוגע גם לעור שלנו. למדתי והוסמכתי כקוסמטיקאית ונטורופתית- מאמנת תזונה הוליסטית ומאמנת בריאות, מטפלת בצמחי מרפא ובשמנים אתרים- בעיצוב תוכניות בלעדיות לאדם. הפילוסופיה שלי היא לקחת בחשבון את האדם השלם כאשר אנו מתייחסים לנושא אריכות ימים, יופי בריאות ורווחה. אתאים את טיפולי העור ועיסוי הפנים לצרכים הספציפיים של הלקוח שלי, ואבחר בקפידה את המוצרים והגישה הנכונה כדי להשיג את התוצאות הטובות ביותר. בסופו של דבר, איך שאנו מרגישים כלפי עצמנו – כך אנו מקרינים את עצמנו אל העולם.</about>
+    </page>
+    <page href="/treatments" title="הטיפולים">TWO</page>
+    <page href="/reviews" title="המלצות" active="false">
+        <review>
+            <image>https://scontent.fsdv1-2.fna.fbcdn.net/v/t1.0-1/p200x200/117047936_10220326648528700_6156449318369659065_n.jpg?_nc_cat=106&amp;_nc_sid=7206a8&amp;_nc_ohc=rAASOWtB3z0AX___090&amp;_nc_ht=scontent.fsdv1-2.fna&amp;_nc_tp=6&amp;oh=51d224f0ebf63dff364853a210cda36a&amp;oe=5F66C6FE</image>
+            <name>Hili Yalon</name>
+            <comment>וואו מדהים חוויה 💫אני הרגשתי בידיים טובות ובטוחה ושינוי מיידי 💞🦋🙏🏽 תודה תודה תודה</comment>
+        </review>
+        <review>
+            <image>https://scontent.fsdv1-2.fna.fbcdn.net/v/t1.0-1/p200x200/82580961_10162843599390147_489903876955176960_n.jpg?_nc_cat=106&amp;_nc_sid=7206a8&amp;_nc_ohc=XpANU4j2y4wAX_V47xF&amp;_nc_oc=AQki-iqgbWv6zJZFokUfLUfpXvh0CY1pfbOzNIcUBu42gLg3hON4cIQdR6uzMQ1RmgA&amp;_nc_ht=scontent.fsdv1-2.fna&amp;_nc_tp=6&amp;oh=10263ded9f282290a731e59fccb3fd18&amp;oe=5F669B81</image>
+            <name>Sivan Talmor</name>
+            <comment>הילה העניקה לי טיפול מ פ נ ק ומוצלח ! ברוך ועדינות , עם תכשירים שפינקו לי את עור הפנים. ממליצה בחום 🤍</comment>
+        </review>
+        <review>
+            <image>https://scontent.fsdv1-2.fna.fbcdn.net/v/t1.0-1/s200x200/11817178_10206028210238679_131643860468915283_n.jpg?_nc_cat=109&amp;_nc_sid=7206a8&amp;_nc_ohc=uee1xt-9jKcAX8WzS5z&amp;_nc_ht=scontent.fsdv1-2.fna&amp;_nc_tp=7&amp;oh=f5e2920bae9f9a7c051efb19a27c60a4&amp;oe=5F67FD4B</image>
+            <name>Danielle Yaari</name>
+            <comment>ממליצה בחום ❤מנסיון אישי! מודה שלא נתתי לאף אחת לגעת לי בפנים חוץ מהילה! טיפול אישי ומסור מלא בכל טוב שבאמת רואים אחריו הבדל משמעותי בפנים! תודה לך אהובה יש לך ידיי זהב🌺</comment>
+        </review>
+        <review>
+            <image>https://scontent.fsdv1-2.fna.fbcdn.net/v/t1.0-1/s200x200/60959914_2419358061449482_6430493450105257984_o.jpg?_nc_cat=102&amp;_nc_sid=7206a8&amp;_nc_ohc=r5DwcHFR7AsAX-7hDm_&amp;_nc_ht=scontent.fsdv1-2.fna&amp;_nc_tp=7&amp;oh=b5a8ca557a216508e3cf5524b6ccbb90&amp;oe=5F680EB5</image>
+            <name>Naama Feuerstein</name>
+            <comment>שפע של מקצועיות , אהבה ודיוק. אין על הילה בכל המובנים. מי שמחפש/ת טיפול מקוצועי , נעים והכי חשוב עם תוצאות מדהימות הילה היא הכתובת ❤</comment>
+        </review>
+    </page>
+    <page href="/contact" title="צור קשר" active="true">
+        <contact-form />
+    </page>
+</site>
