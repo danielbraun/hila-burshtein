@@ -106,31 +106,35 @@ href="https://www.instagram.com/hila.burshtein/">
                 <li>אינסטגרם: <a target="_blank" href="https://www.instagram.com/hila.burshtein/">hila.burshtein</a></li>
                 <li>פייסבוק: <a target="_blank" href="https://www.facebook.com/Hila-Burshtein-162731901343398/">Hila Burshtein</a></li>
             </ul>
-            </xsl:template>
+        </xsl:template>
 
         <xsl:template match="contact-form">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    יצירת קשר
-                </div>
-                <div class="panel-body">
-                    <form class="form-shell" method="POST">
-                        <fieldset class="fieldset-name">
-                            <div class="form-group" id="row-field-name">
-                                <label class="control-label" for="field-name">שם</label>
-                                <input class="form-control" id="field-name" name="name" type="text" value="" />
-                            </div>
-                            <div class="form-group" id="row-field-tel">
-                                <label class="control-label" for="field-tel">טלפון</label>
-                                <input class="form-control" id="field-tel" name="tel" type="tel" value="" />
-                            </div>
-                        </fieldset>
-                        <fieldset class="fieldset-submit">
-                            <div class="form-group" id="row-field-submit">
-                                <input class="form-control btn btn-primary" id="field-submit" name="submit" type="submit" value="שליחה" />
-                            </div>
-                        </fieldset>
-                    </form>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            יצירת קשר
+                        </div>
+                        <div class="panel-body">
+                            <form class="form-shell" method="POST">
+                                <fieldset disabled="true" class="fieldset-name">
+                                    <div class="form-group" id="row-field-name">
+                                        <label class="control-label" for="field-name">שם</label>
+                                        <input class="form-control" id="field-name" name="name" type="text" value="" />
+                                    </div>
+                                    <div class="form-group" id="row-field-tel">
+                                        <label class="control-label" for="field-tel">טלפון</label>
+                                        <input class="form-control" id="field-tel" name="tel" type="tel" value="" />
+                                    </div>
+                                </fieldset>
+                                <fieldset disabled="true" class="fieldset-submit">
+                                    <div class="form-group" id="row-field-submit">
+                                        <input class="form-control btn btn-primary" id="field-submit" name="submit" type="submit" value="שליחה" />
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </xsl:template>
