@@ -181,8 +181,12 @@ href="https://www.instagram.com/hila.burshtein/">
                         <th>טיפול</th>
                         <th>מחיר</th>
                     </tr>
-                    <tr> <td>דיקור קוסמטי</td> <td>xxx ש״ח</td> </tr>
-                    <tr> <td>נטורופתיה</td> <td>xxx ש״ח</td> </tr>
+                    <tr> <td>תפריט תזונה</td> <td>150 ש״ח</td> </tr>
+                    <tr> <td>טיפול פנים טבעי</td> <td>250 ש״ח</td> </tr>
+                    <tr> <td>דיקור קוסמטי</td> <td>100 ש״ח</td> </tr>
+                    <tr> <td>טיפול פנעים טבעי + דיקור קוסמטי</td> <td>300 ש״ח</td> </tr>
+                    <tr> <td>ניקוי פנים עמוק</td> <td>300 ש״ח</td> </tr>
+                    <tr> <td>טיפול פנים אנטי-אייג׳יניג</td> <td>400 ש״ח</td> </tr>
                 </table>
             </div>
         </xsl:template>
