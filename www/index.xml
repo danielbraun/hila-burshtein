@@ -38,6 +38,7 @@
         <treatments-content/>
     </page>
     <page url="contact.xml" title="צור קשר">
+        <contact-sheet/>
         <contact-form />
     </page>
 </site>

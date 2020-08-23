@@ -99,10 +99,19 @@ href="https://www.instagram.com/hila.burshtein/">
             </div>
         </xsl:template>
 
+        <xsl:template match="contact-sheet">
+            <ul>
+                <li>טלפון: <a href="tel:054-5800722">054-5800722</a></li>
+                <li>דוא״ל: <a href="mailto:hila.burshtein@gmail.com">hila.burshtein@gmail.com</a></li>
+                <li>אינסטגרם: <a target="_blank" href="https://www.instagram.com/hila.burshtein/">hila.burshtein</a></li>
+                <li>פייסבוק: <a target="_blank" href="https://www.facebook.com/Hila-Burshtein-162731901343398/">Hila Burshtein</a></li>
+            </ul>
+            </xsl:template>
+
         <xsl:template match="contact-form">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <div class="panel-title">יצירת קשר</div>
+                    יצירת קשר
                 </div>
                 <div class="panel-body">
                     <form class="form-shell" method="POST">
