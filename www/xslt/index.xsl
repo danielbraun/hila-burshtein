@@ -137,7 +137,7 @@ href="https://www.instagram.com/hila.burshtein/">
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="/">הילה</a>
+                        <a class="navbar-brand" href="about.xml">הילה</a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
