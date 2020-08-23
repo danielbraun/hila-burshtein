@@ -1,0 +1,4 @@
+<?xml-stylesheet href="xslt/index.xsl" type="text/xsl" ?>
+<request>
+<url>treatments.xml</url>
+</request>

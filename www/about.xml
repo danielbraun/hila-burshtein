@@ -1,0 +1,4 @@
+<?xml-stylesheet href="xslt/index.xsl" type="text/xsl" ?>
+<request>
+    <url>about.xml</url>
+</request>
