@@ -17,12 +17,22 @@ xmlns:bs3="http://www.getbootstrap.com/3.3">
 </xsl:template>
 
 <xsl:template match="about">
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <h3> מי אני? </h3>
-            <div class="pre-line">
-                <xsl:value-of select="."/>
+    <div class="">
+        <div class="">
+            <div class="row">
+
+                <div class="col-sm-6">
+                    <div class="pre-line">
+                        <xsl:value-of select="."/>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <br/>
+                    <img class="pull-left img-thumbnail" width="100%" src="https://instagram.fhfa3-1.fna.fbcdn.net/v/t51.2885-15/e35/60638942_346556886051831_361278660949274717_n.jpg?_nc_ht=instagram.fhfa3-1.fna.fbcdn.net&amp;_nc_cat=103&amp;_nc_ohc=SJDuAj3V-lAAX8agTJP&amp;oh=4c3ebbbdd7dc3ad7e333abcd711dcd86&amp;oe=5F6AADC4"/>
+                </div>
             </div>
+
         </div>
     </div>
 </xsl:template>
