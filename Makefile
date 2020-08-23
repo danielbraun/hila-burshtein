@@ -1,4 +1,4 @@
-all: www/css/bootstrap.css dist/reviews.xml site.html
+all: www/css/bootstrap.css
 
 %.css: %.less
 	./node_modules/.bin/lessc $< $@

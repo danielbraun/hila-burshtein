@@ -8,7 +8,7 @@ xmlns:bs3="http://www.getbootstrap.com/3.3">
 <xsl:variable name="site" select="document('../index.xml')/site"/>
 
 <xsl:template match="review">
-    <div class="col-md-3 text-center">
+    <div class="col-sm-3 text-center">
         <img class="img-circle" height="140" width="140"  src="{image}">
         </img>
         <h2><xsl:value-of select="./name"/></h2>
@@ -137,7 +137,7 @@ href="https://www.instagram.com/hila.burshtein/">
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">הילה</a>
+                        <a class="navbar-brand" href="/">הילה</a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
