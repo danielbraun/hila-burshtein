@@ -1,0 +1,5 @@
+
+<?xml-stylesheet href="xslt/index.xsl" type="text/xsl" ?>
+<request>
+<url>clinic.xml</url>
+</request>

@@ -5,6 +5,19 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 xmlns:bs3="http://www.getbootstrap.com/3.3">
 <xsl:output method="html"/>
 
+<xsl:template match="row">
+    <div class="row">
+        <xsl:apply-templates />
+        </div>
+
+    </xsl:template>
+
+<xsl:template match="instagram-post">
+    <div class="col-md-4">
+        <img class="img-rounded"
+        src="https://www.instagram.com/p/{.}/media?size=m"/>
+    </div>
+    </xsl:template>
 <xsl:variable name="site" select="document('../index.xml')/site"/>
 
 <xsl:template match="review">
