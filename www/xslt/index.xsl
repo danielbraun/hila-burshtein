@@ -5,7 +5,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 xmlns:bs3="http://www.getbootstrap.com/3.3">
 <xsl:output method="html"/>
 
-<xsl:template match="row">
+<xsl:include href="identity.xsl"/>
+
+<xsl:template match="bs3:row">
     <div class="row">
         <xsl:apply-templates />
     </div>
@@ -26,27 +28,6 @@ xmlns:bs3="http://www.getbootstrap.com/3.3">
         </img>
         <h2><xsl:value-of select="./name"/></h2>
         <p><xsl:value-of select="./comment"/></p>
-    </div>
-</xsl:template>
-
-<xsl:template match="about">
-    <div class="">
-        <div class="">
-            <div class="row">
-
-                <div class="col-sm-6">
-                    <div class="pre-line">
-                        <xsl:value-of select="."/>
-                    </div>
-                </div>
-
-                <div class="col-sm-6">
-                    <br/>
-                    <img class="pull-left img-thumbnail" width="100%" src="https://instagram.fhfa3-1.fna.fbcdn.net/v/t51.2885-15/e35/60638942_346556886051831_361278660949274717_n.jpg?_nc_ht=instagram.fhfa3-1.fna.fbcdn.net&amp;_nc_cat=103&amp;_nc_ohc=SJDuAj3V-lAAX8agTJP&amp;oh=4c3ebbbdd7dc3ad7e333abcd711dcd86&amp;oe=5F6AADC4"/>
-                </div>
-            </div>
-
-        </div>
     </div>
 </xsl:template>
 
@@ -200,73 +181,22 @@ href="https://www.instagram.com/hila.burshtein/">
             </nav>
         </xsl:template>
 
-        <xsl:template match="treatments-content">
+        <xsl:template match="treatments">
             <ul class="list-unstyled">
-                <li>
-                    <h3>תפריט תזונה</h3>
-                    <dl class="dl-horizontal">
-                        <dt> משך הטיפול </dt> <dd> 90 דקות </dd>
-                        <dt>מחיר</dt> <dd>150 ש״ח</dd>
-                        <dt>תיאור</dt>
-                        <dd class="pre-text"> הגוף שלנו מורכב ממספר מערכות אשר מתפקדות כיחידה אחת.
-                            לפעמים את שואלת את עצמך למה דווקא לי יש פצעונים או אקנה? למה דווקא לי יש פיגמנטציה וצלקות? איך זה שדווקא אצלי העור מתחיל להתקמט בגיל כל כך צעיר ובכלל, למה העור מתקמט?
-                            התשובה נמצאת ממש בתוכך, מערכת העיכול הייחודית שלך, שלא דומה לשל אף אחת אחרת.
-                            כנטורופתית וקוסמטיקאית הוליסטית אני מאמינה שעל מנת להעניק לך טיפול פנים איכותי ואפקטיבי
-                            יש להזין ולאזן את עורך מבפנים מבחוץ, וכך נגיע לתוצאות טובות יותר.
-                    </dd>
-
-                </dl>
-
-            </li>
-            <li>
-                <h3>טיפול פנים הוליסטי</h3>
-                <dl class="dl-horizontal">
-                    <dt> משך הטיפול </dt> <dd>90 דקות</dd>
-                    <dt>מחיר</dt> <dd>250 ש״ח</dd>
-                    <dt>תיאור</dt>
-                    <dd class="pre-text"> טיפול פנים הוליסטי הוא טיפול שפותח על מנת לשפר את מראה ומרקם העור תוך התחשבות בשכבות העמוקות של העור והתייחסות מלאה לצרכיו האינדיבידואלים.
-                        זהו טפול קוסמטי ייחודי, המציע הזדמנות להתחדשות פיסית ונפשית.
-                        הטיפול כולו בעל איכויות מרגיעות ומלווה בעיסוי פנים ודקלוטה מפנק.
-                        התוצאות של טיפול הפנים ניכרות מיד לאחר הטיפול  – עורך יהיה רך קורן ומלא חיים.
-
-                </dd>
-
-            </dl>
-
-        </li>
-        <li>
-            <h3>דיקור קוסמטי</h3>
-            <dl class="dl-horizontal">
-                <dt> משך הטיפול </dt> <dd>כ-60 דקות</dd>
-                <dt>מחיר</dt> <dd>150 ש"ח</dd>
-                <dt>תיאור</dt>
-                <dd class="pre-text">טיפול זה יחזק ויגמיש את שרירי פניך ובנוסף, הדיקור הקוסמטי אחראי על עידוד היצור הטבעי של סיבי הקולגן והאלסטין ולכן הוא ימצק ויטשטש את קמטי הבעה וקמטי הגיל ויעודד את עורך להיות יותר אלסטי ובעל מראה בריא וקורן.
-                הטיפול כולל עיסוי פנים בכוסות רוח שישפר את זרימת הדם והספקת החמצן אל עורך.</dd>
-
-        </dl>
-
-    </li>
-    <li> <h3>טיפול פנים הוליסטי משולב</h3>
-        <dl class="dl-horizontal">
-            <dt> משך הטיפול </dt> <dd>כ-120 דקות</dd>
-            <dt>מחיר</dt> <dd>300 ש"ח</dd>
-            <dt>תיאור</dt>
-            <dd class="pre-text">טיפול זה משלב בין טיפול פנים הוליסטי לדיקור קוסמטי.</dd>
-        </dl>
-
-    </li>
-    <li> <h3>ניקוי פנים עמוק</h3>
-        <dl class="dl-horizontal">
-            <dt> משך הטיפול </dt> <dd>כ120 דקות – 150 דקות</dd>
-            <dt>מחיר</dt> <dd>300 ש"ח</dd>
-            <dt>תיאור</dt>
-            <dd class="pre-text">טיפול פנים זה ינקה ויטהר את נקבוביות עורך תוך כדי התחשבות בצרכיו המיוחדים, יסיר בעדינות את הקומודונים שהצטברו עליו ויותיר אותו נקי ואסתטי. </dd>
-
-        </dl>
-
-    </li>
-</ul>
+                <xsl:for-each select="document('../data/treatments.xml')/table/row">
+                    <li>
+                        <h3><xsl:value-of select="name"/></h3>
+                        <dl class="dl-horizontal">
+                            <dt>משך הטיפול</dt> <dd><xsl:value-of select="duration"/></dd>
+                            <dt>מחיר</dt> <dd><xsl:value-of select="price"/></dd>
+                            <dt>תיאור</dt>
+                            <dd class="pre-text"> <xsl:value-of select="description"/> </dd>
+                        </dl>
+                    </li>
+                </xsl:for-each>
+            </ul>
         </xsl:template>
+
 
         <xsl:template match="page">
             <html>
@@ -304,3 +234,5 @@ href="https://www.instagram.com/hila.burshtein/">
         </xsl:template>
 
     </xsl:stylesheet>
+
+
