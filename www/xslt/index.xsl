@@ -13,7 +13,7 @@
     </xsl:template>
 
     <xsl:template match="instagram-post">
-        <div class="col-md-4">
+        <div class="col-md-4 text-center">
             <img class="img-rounded"
             src="https://www.instagram.com/p/{.}/media?size=m"/>
         </div>
