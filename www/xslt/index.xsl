@@ -26,7 +26,7 @@ xmlns:bs3="http://www.getbootstrap.com/3.3">
     <div class="col-sm-3 text-center">
         <img class="img-circle" height="100" width="100"  src="{image}">
         </img>
-        <h2><xsl:value-of select="./name"/></h2>
+        <h3><xsl:value-of select="./name"/></h3>
         <p><xsl:value-of select="./comment"/></p>
     </div>
 </xsl:template>
@@ -51,46 +51,46 @@ href="https://www.instagram.com/hila.burshtein/">
                         054-580-0722
                 </a>
 
-            </xsl:template>
+</xsl:template>
 
-            <xsl:template match="photo">
-                <div class="col-xs-6 col-md-3">
-                    <a target="_blank" class="thumbnail">
-                        <xsl:attribute name="href">
-                            <xsl:value-of select="@url"/>
-                        </xsl:attribute>
-                        <img>
-                            <xsl:attribute name="src">
-                                <xsl:value-of select="@url"/>
-                            </xsl:attribute>
-                        </img>
-                    </a>
-                </div>
-            </xsl:template>
+<xsl:template match="photo">
+    <div class="col-xs-6 col-md-3">
+        <a target="_blank" class="thumbnail">
+            <xsl:attribute name="href">
+                <xsl:value-of select="@url"/>
+            </xsl:attribute>
+            <img>
+                <xsl:attribute name="src">
+                    <xsl:value-of select="@url"/>
+                </xsl:attribute>
+            </img>
+        </a>
+    </div>
+</xsl:template>
 
-            <xsl:template match="featurette">
-                <div class="row featurette">
-                    <div class="col-md-7">
-                        <h2 class="featurette-heading">
-                            <xsl:value-of select="@heading"/>
-                            <br/>
-                            <span class="text-muted">
-                                <xsl:value-of select="@secondary"/>
-                            </span>
-                        </h2>
-                        <p class="lead">
-                            <xsl:value-of select="."/>
-                        </p>
-                    </div>
-                    <div class="col-md-5">
-                        <img alt="500x500"
-                        class="featurette-image img-responsive center-block" height="500" width="500" >
-                        <xsl:attribute name="src">
-                            <xsl:value-of select="@img"/>
-                        </xsl:attribute>
-                    </img>
-                </div>
-            </div>
+<xsl:template match="featurette">
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">
+                <xsl:value-of select="@heading"/>
+                <br/>
+                <span class="text-muted">
+                    <xsl:value-of select="@secondary"/>
+                </span>
+            </h2>
+            <p class="lead">
+                <xsl:value-of select="."/>
+            </p>
+        </div>
+        <div class="col-md-5">
+            <img alt="500x500"
+            class="featurette-image img-responsive center-block" height="500" width="500" >
+            <xsl:attribute name="src">
+                <xsl:value-of select="@img"/>
+            </xsl:attribute>
+        </img>
+    </div>
+</div>
         </xsl:template>
 
         <xsl:template match="contact-sheet">
@@ -182,7 +182,7 @@ href="https://www.instagram.com/hila.burshtein/">
         </xsl:template>
 
         <xsl:template match="treatments">
-            <ul class="list-unstyled">
+            <ul>
                 <xsl:for-each select="document('../data/treatments.xml')/table/row">
                     <li>
                         <h3><xsl:value-of select="name"/></h3>
